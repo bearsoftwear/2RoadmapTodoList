@@ -1,0 +1,8 @@
+Build a To-Do List App where users can:
+
+1. Add tasks with a title and optional description.
+2. edit tasks
+3. Mark tasks as complete/incomplete.
+4. Delete tasks.
+5. Persist tasks in the browser’s localStorage to retain data on page refresh.
+6. use vite react material ui
