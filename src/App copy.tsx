@@ -51,7 +51,7 @@ const tasks: Task[] = [
     type: 'Documentation',
     title: 'Lorem ipsum dolor sit amet.',
     description:
-      "You can't compress the program without quantifying the open-source SSD...",
+        "You can't compress the program without quantifying the open-source SSD...",
     dueDate: '2023-10-15',
     status: 'In Progress',
     priority: 'Medium',
@@ -61,7 +61,7 @@ const tasks: Task[] = [
     type: 'Documentation',
     title: 'Lorem ipsum dolor sit amet.',
     description:
-      'Try to calculate the EXE feed, maybe it will index the multi-byte pixel!',
+        'Try to calculate the EXE feed, maybe it will index the multi-byte pixel!',
     status: 'Backlog',
     priority: 'Medium',
   },
@@ -78,7 +78,7 @@ const tasks: Task[] = [
     type: 'Feature',
     title: 'Lorem ipsum dolor sit amet.',
     description:
-      'The SAS interface is down, bypass the open-source pixel so we can back...',
+        'The SAS interface is down, bypass the open-source pixel so we can back...',
     status: 'Backlog',
     priority: 'Medium',
   },
@@ -87,7 +87,7 @@ const tasks: Task[] = [
     type: 'Feature',
     title: 'Lorem ipsum dolor sit amet.',
     description:
-      "I'll parse the wireless SSL protocol, that should driver the API panel!",
+        "I'll parse the wireless SSL protocol, that should driver the API panel!",
     status: 'Canceled',
     dueDate: '2023-10-15',
     priority: 'Medium',
@@ -97,7 +97,7 @@ const tasks: Task[] = [
     type: 'Bug',
     title: 'Lorem ipsum dolor sit amet.',
     description:
-      'Use the digital TLS panel, then you can transmit the haptic system!',
+        'Use the digital TLS panel, then you can transmit the haptic system!',
     status: 'Done',
     priority: 'High',
   },
@@ -106,7 +106,7 @@ const tasks: Task[] = [
     type: 'Feature',
     title: 'Lorem ipsum dolor sit amet.',
     description:
-      'The UTF8 application is down, parse the neural bandwidth so we can back...',
+        'The UTF8 application is down, parse the neural bandwidth so we can back...',
     status: 'Done',
     dueDate: '2023-10-15',
     priority: 'High',
@@ -116,7 +116,7 @@ const tasks: Task[] = [
     type: 'Feature',
     title: 'Lorem ipsum dolor sit amet.',
     description:
-      "Generating the driver won't do anything, we need to quantify the 1080p S...",
+        "Generating the driver won't do anything, we need to quantify the 1080p S...",
     status: 'In Progress',
     priority: 'Medium',
   },
@@ -165,13 +165,13 @@ function App() {
   // Render status chip with appropriate color
   const renderStatusChip = (status: Task['status']) => {
     let color:
-      | 'default'
-      | 'primary'
-      | 'secondary'
-      | 'error'
-      | 'info'
-      | 'success'
-      | 'warning' = 'default';
+        | 'default'
+        | 'primary'
+        | 'secondary'
+        | 'error'
+        | 'info'
+        | 'success'
+        | 'warning' = 'default';
 
     switch (status) {
       case 'In Progress':
@@ -192,16 +192,16 @@ function App() {
     }
 
     return (
-      <Chip
-        size="small"
-        color={color}
-        label={status}
-        sx={{
-          borderRadius: '4px',
-          fontWeight: 500,
-          fontSize: '0.75rem',
-        }}
-      />
+        <Chip
+            size="small"
+            color={color}
+            label={status}
+            sx={{
+              borderRadius: '4px',
+              fontWeight: 500,
+              fontSize: '0.75rem',
+            }}
+        />
     );
   };
 
@@ -222,12 +222,12 @@ function App() {
     }
 
     return (
-      <Stack direction="row" spacing={0.5} alignItems="center">
-        <Box sx={{ color }}>{icon}</Box>
-        <Typography variant="body2" color="text.secondary">
-          {priority}
-        </Typography>
-      </Stack>
+        <Stack direction="row" spacing={0.5} alignItems="center">
+          <Box sx={{ color }}>{icon}</Box>
+          <Typography variant="body2" color="text.secondary">
+            {priority}
+          </Typography>
+        </Stack>
     );
   };
 
@@ -248,9 +248,9 @@ function App() {
     }
 
     return (
-      <Typography variant="body2" sx={{ color, fontWeight: 500 }}>
-        {type}
-      </Typography>
+        <Typography variant="body2" sx={{ color, fontWeight: 500 }}>
+          {type}
+        </Typography>
     );
   };
 
@@ -288,210 +288,210 @@ function App() {
   }
 
   return (
-    <>
-      <Box sx={{ maxWidth: 1200, mx: 'auto', p: 3 }}>
-        <Paper sx={{ p: 3, mb: 3, borderRadius: 2 }}>
-          <Box
-            sx={{
-              display: 'flex',
-              alignItems: 'center',
-              justifyContent: 'space-between',
-              mb: 2,
-            }}
-          >
-            <Box>
-              <Typography variant="h5" fontWeight="bold">
-                Welcome back!
-              </Typography>
-              <Typography variant="body2" color="text.secondary">
-                Here's a list of your tasks for this month!
-              </Typography>
+      <>
+        <Box sx={{ maxWidth: 1200, mx: 'auto', p: 3 }}>
+          <Paper sx={{ p: 3, mb: 3, borderRadius: 2 }}>
+            <Box
+                sx={{
+                  display: 'flex',
+                  alignItems: 'center',
+                  justifyContent: 'space-between',
+                  mb: 2,
+                }}
+            >
+              <Box>
+                <Typography variant="h5" fontWeight="bold">
+                  Welcome back!
+                </Typography>
+                <Typography variant="body2" color="text.secondary">
+                  Here's a list of your tasks for this month!
+                </Typography>
+              </Box>
+              <Avatar sx={{ bgcolor: "success.main" }}>
+                <AddCircleSharp />
+              </Avatar>
             </Box>
-            <Avatar sx={{ bgcolor: "success.main" }}>
-              <AddCircleSharp />
-            </Avatar>
-          </Box>
 
-          <Box sx={{ display: 'flex', gap: 2, mb: 3 }}>
-            <TextField
-              placeholder="Filter tasks..."
-              variant="outlined"
-              size="small"
-              fullWidth
-              InputProps={{
-                startAdornment: (
-                  <InputAdornment position="start">
-                    <Search fontSize="small" />
-                  </InputAdornment>
-                ),
-              }}
-              sx={{ maxWidth: 300 }}
-            />
+            <Box sx={{ display: 'flex', gap: 2, mb: 3 }}>
+              <TextField
+                  placeholder="Filter tasks..."
+                  variant="outlined"
+                  size="small"
+                  fullWidth
+                  InputProps={{
+                    startAdornment: (
+                        <InputAdornment position="start">
+                          <Search fontSize="small" />
+                        </InputAdornment>
+                    ),
+                  }}
+                  sx={{ maxWidth: 300 }}
+              />
 
-            <Button variant="outlined" startIcon={<FilterList />} onClick={handleFilterOpen} size="small">
-              Status
-            </Button>
-            <Menu anchorEl={filterAnchorEl} open={Boolean(filterAnchorEl)} onClose={handleFilterClose}>
-              <MenuItem onClick={handleFilterClose}>All</MenuItem>
-              <MenuItem onClick={handleFilterClose}>In Progress</MenuItem>
-              <MenuItem onClick={handleFilterClose}>Backlog</MenuItem>
-              <MenuItem onClick={handleFilterClose}>Todo</MenuItem>
-              <MenuItem onClick={handleFilterClose}>Canceled</MenuItem>
-              <MenuItem onClick={handleFilterClose}>Done</MenuItem>
-            </Menu>
+              <Button variant="outlined" startIcon={<FilterList />} onClick={handleFilterOpen} size="small">
+                Status
+              </Button>
+              <Menu anchorEl={filterAnchorEl} open={Boolean(filterAnchorEl)} onClose={handleFilterClose}>
+                <MenuItem onClick={handleFilterClose}>All</MenuItem>
+                <MenuItem onClick={handleFilterClose}>In Progress</MenuItem>
+                <MenuItem onClick={handleFilterClose}>Backlog</MenuItem>
+                <MenuItem onClick={handleFilterClose}>Todo</MenuItem>
+                <MenuItem onClick={handleFilterClose}>Canceled</MenuItem>
+                <MenuItem onClick={handleFilterClose}>Done</MenuItem>
+              </Menu>
 
-            <Button variant="outlined" startIcon={<FilterList />} onClick={handlePriorityOpen} size="small">
-              Priority
-            </Button>
-            <Menu anchorEl={priorityAnchorEl} open={Boolean(priorityAnchorEl)} onClose={handlePriorityClose}>
-              <MenuItem onClick={handlePriorityClose}>All</MenuItem>
-              <MenuItem onClick={handlePriorityClose}>High</MenuItem>
-              <MenuItem onClick={handlePriorityClose}>Medium</MenuItem>
-              <MenuItem onClick={handlePriorityClose}>Low</MenuItem>
-            </Menu>
+              <Button variant="outlined" startIcon={<FilterList />} onClick={handlePriorityOpen} size="small">
+                Priority
+              </Button>
+              <Menu anchorEl={priorityAnchorEl} open={Boolean(priorityAnchorEl)} onClose={handlePriorityClose}>
+                <MenuItem onClick={handlePriorityClose}>All</MenuItem>
+                <MenuItem onClick={handlePriorityClose}>High</MenuItem>
+                <MenuItem onClick={handlePriorityClose}>Medium</MenuItem>
+                <MenuItem onClick={handlePriorityClose}>Low</MenuItem>
+              </Menu>
 
-            <Box sx={{ flexGrow: 1 }} />
+              <Box sx={{ flexGrow: 1 }} />
 
-            <Button variant="outlined" startIcon={<ViewAgenda />} onClick={handleViewOpen} size="small">
-              View
-            </Button>
-            <Menu anchorEl={viewAnchorEl} open={Boolean(viewAnchorEl)} onClose={handleViewClose}>
-              <MenuItem onClick={handleViewClose}>Table</MenuItem>
-              <MenuItem onClick={handleViewClose}>Board</MenuItem>
-              <MenuItem onClick={handleViewClose}>Calendar</MenuItem>
-            </Menu>
+              <Button variant="outlined" startIcon={<ViewAgenda />} onClick={handleViewOpen} size="small">
+                View
+              </Button>
+              <Menu anchorEl={viewAnchorEl} open={Boolean(viewAnchorEl)} onClose={handleViewClose}>
+                <MenuItem onClick={handleViewClose}>Table</MenuItem>
+                <MenuItem onClick={handleViewClose}>Board</MenuItem>
+                <MenuItem onClick={handleViewClose}>Calendar</MenuItem>
+              </Menu>
 
 
-          </Box>
+            </Box>
 
-          <TableContainer
-            component={Paper}
-            elevation={0}
-            sx={{ border: '1px solid', borderColor: 'divider' }}
-          >
-            <Table sx={{ minWidth: 650 }}>
-              <TableHead>
-                <TableRow>
-                  <TableCell padding="checkbox">
-                    <Checkbox
-                      indeterminate={
-                        selected.length > 0 && selected.length < tasks.length
-                      }
-                      checked={
-                        tasks.length > 0 && selected.length === tasks.length
-                      }
-                      onChange={handleSelectAll}
-                    />
-                  </TableCell>
-                  <TableCell>
-                    <Typography variant="subtitle2">Title</Typography>
-                  </TableCell>
-                  <TableCell>
-                    <Typography variant="subtitle2">Due Date</Typography>
-                  </TableCell>
-                  <TableCell align="right">
-                    <Typography variant="subtitle2">Status</Typography>
-                  </TableCell>
-                  <TableCell align="right">
-                    <Typography variant="subtitle2">Priority</Typography>
-                  </TableCell>
-                  <TableCell align="right"></TableCell>
-                </TableRow>
-              </TableHead>
+            <TableContainer
+                component={Paper}
+                elevation={0}
+                sx={{ border: '1px solid', borderColor: 'divider' }}
+            >
+              <Table sx={{ minWidth: 650 }}>
+                <TableHead>
+                  <TableRow>
+                    <TableCell padding="checkbox">
+                      <Checkbox
+                          indeterminate={
+                              selected.length > 0 && selected.length < tasks.length
+                          }
+                          checked={
+                              tasks.length > 0 && selected.length === tasks.length
+                          }
+                          onChange={handleSelectAll}
+                      />
+                    </TableCell>
+                    <TableCell>
+                      <Typography variant="subtitle2">Title</Typography>
+                    </TableCell>
+                    <TableCell>
+                      <Typography variant="subtitle2">Due Date</Typography>
+                    </TableCell>
+                    <TableCell align="right">
+                      <Typography variant="subtitle2">Status</Typography>
+                    </TableCell>
+                    <TableCell align="right">
+                      <Typography variant="subtitle2">Priority</Typography>
+                    </TableCell>
+                    <TableCell align="right"></TableCell>
+                  </TableRow>
+                </TableHead>
 
-              <TableBody>
-                {tasks.map((task) => {
-                  const isItemSelected = isSelected(task.id);
+                <TableBody>
+                  {tasks.map((task) => {
+                    const isItemSelected = isSelected(task.id);
 
-                  return (
-                    <TableRow
-                      key={task.id}
-                      hover
-                      selected={isItemSelected}
-                      sx={{
-                        '&.Mui-selected': {
-                          backgroundColor: 'action.selected',
-                        },
-                      }}
-                    >
-                      <TableCell padding="checkbox">
-                        <Checkbox
-                          checked={isItemSelected}
-                          onClick={() => handleSelect(task.id)}
-                        />
-                      </TableCell>
-                      <TableCell>
-                        <Box
-                          sx={{
-                            display: 'flex',
-                            flexDirection: 'column',
-                            gap: 0.5,
-                          }}
-                        >
-                          <Box
+                    return (
+                        <TableRow
+                            key={task.id}
+                            hover
+                            selected={isItemSelected}
                             sx={{
-                              display: 'flex',
-                              gap: 1,
-                              alignItems: 'center',
+                              '&.Mui-selected': {
+                                backgroundColor: 'action.selected',
+                              },
                             }}
-                          >
-                            <Box sx={{ minWidth: 100 }}>
-                              <Typography
-                                variant="caption"
-                                color="text.secondary"
+                        >
+                          <TableCell padding="checkbox">
+                            <Checkbox
+                                checked={isItemSelected}
+                                onClick={() => handleSelect(task.id)}
+                            />
+                          </TableCell>
+                          <TableCell>
+                            <Box
+                                sx={{
+                                  display: 'flex',
+                                  flexDirection: 'column',
+                                  gap: 0.5,
+                                }}
+                            >
+                              <Box
+                                  sx={{
+                                    display: 'flex',
+                                    gap: 1,
+                                    alignItems: 'center',
+                                  }}
                               >
-                                {task.id}
-                              </Typography>
-                              {renderType(task.type)}
+                                <Box sx={{ minWidth: 100 }}>
+                                  <Typography
+                                      variant="caption"
+                                      color="text.secondary"
+                                  >
+                                    {task.id}
+                                  </Typography>
+                                  {renderType(task.type)}
+                                </Box>
+                                <Divider orientation="vertical" flexItem />
+                                <Box>
+                                  <Typography variant="body2">
+                                    {task.title}
+                                  </Typography>
+                                  <Typography
+                                      variant="caption"
+                                      color="text.secondary"
+                                  >
+                                    {task.description}
+                                  </Typography>
+                                </Box>
+                              </Box>
                             </Box>
-                            <Divider orientation="vertical" flexItem />
-                            <Box>
-                              <Typography variant="body2">
-                                {task.title}
-                              </Typography>
-                              <Typography
-                                variant="caption"
-                                color="text.secondary"
-                              >
-                                {task.description}
-                              </Typography>
-                            </Box>
-                          </Box>
-                        </Box>
-                      </TableCell>
-                      <TableCell>
-                        <Typography variant="body2">
-                          {task.dueDate || 'No due date'}
-                        </Typography>
-                      </TableCell>
-                      <TableCell align="right">
-                        {renderStatusChip(task.status)}
-                      </TableCell>
-                      <TableCell align="right">
-                        {renderPriority(task.priority)}
-                      </TableCell>
-                      <TableCell align="right">
-                        <IconButton size="small" onClick={handleMenuOpen}>
-                          <MoreVert fontSize="small" />
-                        </IconButton>
-                      </TableCell>
-                    </TableRow>
-                  );
-                })}
-              </TableBody>
-            </Table>
-          </TableContainer>
+                          </TableCell>
+                          <TableCell>
+                            <Typography variant="body2">
+                              {task.dueDate || 'No due date'}
+                            </Typography>
+                          </TableCell>
+                          <TableCell align="right">
+                            {renderStatusChip(task.status)}
+                          </TableCell>
+                          <TableCell align="right">
+                            {renderPriority(task.priority)}
+                          </TableCell>
+                          <TableCell align="right">
+                            <IconButton size="small" onClick={handleMenuOpen}>
+                              <MoreVert fontSize="small" />
+                            </IconButton>
+                          </TableCell>
+                        </TableRow>
+                    );
+                  })}
+                </TableBody>
+              </Table>
+            </TableContainer>
 
-          <Menu anchorEl={anchorEl} open={Boolean(anchorEl)} onClose={handleMenuClose}>
-            <MenuItem onClick={handleMenuClose}>Edit</MenuItem>
-            <MenuItem onClick={handleMenuClose}>Duplicate</MenuItem>
-            <MenuItem onClick={handleMenuClose}>Delete</MenuItem>
-            <Divider />
-            <MenuItem onClick={handleMenuClose}>Archive</MenuItem>
-          </Menu>
-        </Paper>
-      </Box>
-    </>
+            <Menu anchorEl={anchorEl} open={Boolean(anchorEl)} onClose={handleMenuClose}>
+              <MenuItem onClick={handleMenuClose}>Edit</MenuItem>
+              <MenuItem onClick={handleMenuClose}>Duplicate</MenuItem>
+              <MenuItem onClick={handleMenuClose}>Delete</MenuItem>
+              <Divider />
+              <MenuItem onClick={handleMenuClose}>Archive</MenuItem>
+            </Menu>
+          </Paper>
+        </Box>
+      </>
   );
 }
 
